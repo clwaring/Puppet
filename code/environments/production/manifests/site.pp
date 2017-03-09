@@ -1,11 +1,15 @@
-file {'/tmp/it_works.txt':
-    ensure   => present,
-    mode     => '0644',
-    content  => "It works on ${ipaddress_eth0}!\n",
+node default {
+
 }
 
-file {'/tmp/test2.txt':
-    ensure    => present,
-    mode      => '0644',
-    content   => "This is another test to verify that puppet is working. It is.\n",
+node 'pagent1.idx.local' {
+    include documents
+}
+
+node 'desktop-spare1.idx.local' {
+
+}
+
+node 'idxs-mac-mini.local' {
+
 }
