@@ -5,7 +5,7 @@ class users {
         ensure    => present
     }
 
-    user { 'chrisw'
+    user { 'chrisw' :
         password  => '$1$r4OUtBwh$C9WAqiBhdJ61YjIUA8YKh.'
         ensure    => present
     }
