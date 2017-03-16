@@ -4,7 +4,6 @@ node default {
 
 node 'pagent1.idx.local' {
     include documents
-    include users
 
     notify { hiera(motd::message): }
 }
