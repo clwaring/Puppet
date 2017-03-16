@@ -9,7 +9,14 @@ node 'pagent1.idx.local' {
 }
 
 node 'puppetagent2.idxlocal' {
-    notify { hiera(motd::message): }
+    class { 'hiera':
+        hierarchy => [
+            '%{environment}/%{calling_class}',
+            '%{environment}',
+            'common',
+        ],
+        eyaml        => true,
+    }
 }
 
 node 'desktop-spare1.idx.local' {
