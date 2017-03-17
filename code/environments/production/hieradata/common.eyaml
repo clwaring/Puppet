@@ -1,1 +1,2 @@
-motd::message: 'This is the TOP SECRET message of the day.'
+motd::message: 'This is the message of the day.'
+motd::secret: 'This is a TOP SECRET message.'
