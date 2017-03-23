@@ -49,11 +49,6 @@ node 'desktop-spare1.idx.local' {
         provider        => 'chocolatey',
     }
 
-    package { 'notepadplusplus':
-        ensure          => latest,
-        provider        => 'chocolatey',
-    }
-
     package { 'putty':
         ensure          => latest,
         provider        => 'chocolatey',
