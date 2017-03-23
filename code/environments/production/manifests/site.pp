@@ -13,9 +13,9 @@ node 'puppetagent2.idxlocal' {
 }
 
 node 'desktop-spare1.idx.local' {
-
+    include software::browsers::firefox
 }
 
 node 'idxs-mac-mini.local' {
-
+    include software::browsers::firefox
 }
