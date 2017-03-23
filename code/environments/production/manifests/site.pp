@@ -9,8 +9,7 @@ node 'pagent1.idx.local' {
 }
 
 node 'puppetagent2.idxlocal' {
-    notify { hiera(motd::secret): }
-    notify { hiera(motd::message): }
+    #notify { hiera(motd::secret): }
 }
 
 node 'desktop-spare1.idx.local' {
