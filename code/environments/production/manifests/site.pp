@@ -14,12 +14,12 @@ node 'puppetagent2.idxlocal' {
 node 'desktop-spare1.idx.local' {
     include chocolatey
 
-    package { 'notepadplusplus':
+    package { 'adobereader':
         ensure          => latest,
         provider        => 'chocolatey',
     }
 
-    package { 'winrar':
+    package { 'firefox':
         ensure          => latest,
         provider        => 'chocolatey',
     }
@@ -29,7 +29,12 @@ node 'desktop-spare1.idx.local' {
         provider        => 'chocolatey',
     }
 
-    package { 'firefox':
+    package { 'adblockpluschrome':
+        ensure          => latest,
+        provider        => 'chocolatey',
+    }
+
+    package { 'hipchat':
         ensure          => latest,
         provider        => 'chocolatey',
     }
@@ -44,7 +49,12 @@ node 'desktop-spare1.idx.local' {
         provider        => 'chocolatey',
     }
 
-    package { 'adobereader':
+    package { 'malwarebytes':
+        ensure          => latest,
+        provider        => 'chocolatey',
+    }
+
+    package { 'notepadplusplus':
         ensure          => latest,
         provider        => 'chocolatey',
     }
@@ -54,7 +64,17 @@ node 'desktop-spare1.idx.local' {
         provider        => 'chocolatey',
     }
 
-    package { 'malwarebytes':
+    package { 'tightvnc':
+        ensure          => latest,
+        provider        => 'chocolatey',
+    }
+
+    package { 'veracrypt':
+        ensure          => latest,
+        provider        => 'chocolatey',
+    }
+
+    package { 'winrar':
         ensure          => latest,
         provider        => 'chocolatey',
     }
@@ -63,6 +83,8 @@ node 'desktop-spare1.idx.local' {
         ensure          => latest,
         provider        => 'chocolatey',
     }
+
+
 }
 
 node 'idxs-mac-mini.local' {
