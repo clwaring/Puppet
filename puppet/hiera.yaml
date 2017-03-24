@@ -3,6 +3,7 @@
   - eyaml
   - yaml
 :hierarchy:
+  - "groups/%{::}"
   - "nodes/%{::trusted.certname}"
   - common
 
@@ -17,4 +18,3 @@
     :datadir:
     :pkcs7_private_key: /etc/puppetlabs/keys/private_key.pkcs7.pem
     :pkcs7_public_key: /etc/puppetlabs/keys/public_key.pkcs7.pem
-    

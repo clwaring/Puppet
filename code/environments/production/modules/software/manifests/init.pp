@@ -30,11 +30,6 @@ class software {
       provider        => 'chocolatey',
   }
 
-  package { 'jdk8':
-      ensure          => latest,
-      provider        => 'chocolatey',
-  }
-
   package { 'malwarebytes':
       ensure          => latest,
       provider        => 'chocolatey',
@@ -46,11 +41,6 @@ class software {
   }
 
   package { 'putty':
-      ensure          => latest,
-      provider        => 'chocolatey',
-  }
-
-  package { 'tightvnc':
       ensure          => latest,
       provider        => 'chocolatey',
   }
