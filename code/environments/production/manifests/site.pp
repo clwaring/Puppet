@@ -13,7 +13,9 @@ node default {
 
 
 #development nodes - windows
-
+node 'dev-chrisw-win.idx.local' {
+  notify {hiera(motd::message):}
+}
 
 #executive nodes
 
@@ -36,6 +38,8 @@ node 'desktop-1vb20lf.idxlocal' {
 #macos nodes
 node 'idxs-mac-mini.local' {
 }
+
+
 
 
 #vm nodes - ubuntu

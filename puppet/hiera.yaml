@@ -3,7 +3,8 @@
   - eyaml
   - yaml
 :hierarchy:
-  - "groups/%{::}"
+  - "groups/%{::groupname}"
+  - "os/%{::osname}"
   - "nodes/%{::trusted.certname}"
   - common
 
