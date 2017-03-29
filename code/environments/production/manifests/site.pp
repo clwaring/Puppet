@@ -37,9 +37,8 @@ node 'desktop-1vb20lf.idxlocal' {
 
 #macos nodes
 node 'idxs-mac-mini.local' {
+  notify {hiera(motd::message):}
 }
-
-
 
 
 #vm nodes - ubuntu
