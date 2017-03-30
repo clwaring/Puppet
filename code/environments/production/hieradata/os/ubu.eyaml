@@ -1,0 +1,5 @@
+---
+classes:
+  - software
+  
+provider: 'apt'

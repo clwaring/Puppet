@@ -3,3 +3,5 @@ classes:
   - chocolatey
 
 motd::message: 'This is the Windows message of the day.'
+
+provider: 'chocolatey'

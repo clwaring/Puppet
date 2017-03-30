@@ -12,6 +12,7 @@ node default {
 #development nodes - ubuntu
 node /(dev-)+(ubu-)+(\w+.)+(idx.local|idxlocal)/ {
   #notify {hiera(motd::message):}
+  hiera_include('classes')
 }
 
 #development nodes - windows
