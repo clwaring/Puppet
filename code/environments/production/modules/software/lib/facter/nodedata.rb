@@ -4,14 +4,8 @@ Facter.add(:groupname) do
   end
 end
 
-Facter.add(:employeename) do
-  setcode do
-    Facter.value(:hostname)[4..-1][/(.*?)(\-|\z)/,1]
-  end
-end
-
 Facter.add(:osname) do
   setcode do
-    Facter.value(:hostname)[12..-1][/(.*?)(\-|\z)/,1]
+    Facter.value(:hostname)[4..6]
   end
 end
