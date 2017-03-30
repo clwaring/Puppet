@@ -13,9 +13,14 @@ node default {
 
 
 #development nodes - windows
-node 'dev-win-chrisw.idx.local' {
+#node 'dev-win-chrisw.idx.local' {
+#  notify {hiera(motd::message):}
+#}
+
+node /(dev-)+(win-)+(\w+.)+(idx.local|idxlocal)/ {
   notify {hiera(motd::message):}
 }
+
 
 #executive nodes
 
