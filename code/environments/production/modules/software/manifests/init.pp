@@ -101,21 +101,13 @@ class software::ubuntu {
       provider        => hiera(provider),
   }
 
-  file { '/opt/veracrypt/':
-      ensure          => directory,
-  }
-
-  file { "/opt/veracrypt/veracrypt-1.19-setup.tar.bz2":
-      owner           => root,
-      mode            => '644',
-      ensure          => present,
-      source          => "https://veracrypt.codeplex.com/downloads/get/1614079"
-  }
 
   package { 'veracrypt':
       ensure          => latest,
       provider        => hiera(provider),
-      source          => "/opt/veracrypt/veracrypt-1.19-setup.tar.bz2"
+      require         => Exec['add-apt-repository ppa:unit193/encryption']
+      require         => Exec['apt update']
+      require         => Exec['apt install veracrypt']
   }
 
   package { 'vim':
