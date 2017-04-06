@@ -105,12 +105,12 @@ class software::ubuntu {
       path             => '/usr/bin',
   }
 
-  exec { 'apt update':
-      command          => 'apt update',
+  exec { 'apt-get update':
+      command          => 'apt-get update',
       path             => '/usr/bin',
   }
 
-  exec { 'apt install veracrypt':
+  exec { 'apt-get install veracrypt':
       command          => 'apt install veracrypt',
       path             => '/usr/bin',
   }
