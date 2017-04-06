@@ -94,11 +94,11 @@ class software::ubuntu {
       path             => '/usr/bin',
   }
 
-  package { 'hipchat4':
-      ensure          => latest,
-      provider        => hiera(provider),
-      source          => "/opt/hipchat/HipChat4-4.29.4.1662-Linux.deb"
-  }
+  #package { 'hipchat4':
+  #    ensure          => latest,
+  #    provider        => hiera(provider),
+  #    source          => "/opt/hipchat/HipChat4-4.29.4.1662-Linux.deb"
+  #}
 
 
   package { 'libreoffice':
