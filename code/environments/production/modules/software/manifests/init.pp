@@ -91,7 +91,7 @@ class software::ubuntu {
 
   exec { 'dpkg -i /opt/hipchat/HipChat4-4.29.4.1662-Linux.deb':
       command          => 'dpkg -i /opt/hipchat/HipChat4-4.29.4.1662-Linux.deb',
-      path             => '/usr/bin',
+      path             => ['/usr/bin', '/usr/sbin', '/usr/local/sbin'],
   }
 
   #package { 'hipchat4':
