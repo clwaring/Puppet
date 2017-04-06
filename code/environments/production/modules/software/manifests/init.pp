@@ -103,14 +103,17 @@ class software::ubuntu {
 
   exec { 'add-apt-repository ppa:unit193/encryption':
       command          => 'add-apt-repository ppa:unit193/encryption',
+      path             => '/bin',
   }
 
   exec { 'apt update':
       command          => 'apt update',
+      path             => '/bin',
   }
 
   exec { 'apt install veracrypt':
       command          => 'apt install veracrypt',
+      path             => '/bin',
   }
 
   package { 'veracrypt':
