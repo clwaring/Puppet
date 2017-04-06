@@ -84,7 +84,7 @@ class software::ubuntu {
 
   file { "/opt/hipchat/HipChat4-4.29.4.1662-Linux.deb":
       owner           => root,
-      mode            => 644,
+      mode            => '644',
       ensure          => present,
       source          => "https://atlassian.artifactoryonline.com/atlassian/hipchat-apt-client/pool/HipChat4-4.29.4.1662-Linux.deb"
   }
@@ -107,7 +107,7 @@ class software::ubuntu {
 
   file { "/opt/veracrypt/veracrypt-1.19-setup.tar.bz2":
       owner           => root,
-      mode            => 644,
+      mode            => '644',
       ensure          => present,
       source          => "https://veracrypt.codeplex.com/downloads/get/1614079"
   }
