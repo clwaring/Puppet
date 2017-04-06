@@ -61,6 +61,7 @@ class software::windows {
   }
 }
 
+
 class software::ubuntu {
 
   package { 'chromium-browser':
@@ -93,13 +94,6 @@ class software::ubuntu {
       command          => 'dpkg -i /opt/hipchat/HipChat4-4.29.4.1662-Linux.deb',
       path             => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
   }
-
-  #package { 'hipchat4':
-  #    ensure          => latest,
-  #    provider        => hiera(provider),
-  #    source          => "/opt/hipchat/HipChat4-4.29.4.1662-Linux.deb"
-  #}
-
 
   package { 'libreoffice':
       ensure          => latest,
