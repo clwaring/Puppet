@@ -82,7 +82,7 @@ class software::ubuntu {
       ensure          => directory,
   }
 
-  file { '/opt/hipchat/HipChat4-4.29.4.1662-Linux.deb':
+  file { "/opt/hipchat/HipChat4-4.29.4.1662-Linux.deb":
       owner           => root,
       mode            => 644,
       ensure          => present,
@@ -105,7 +105,7 @@ class software::ubuntu {
       ensure          => directory,
   }
 
-  file { '/opt/veracrypt/veracrypt-1.19-setup.tar.bz2':
+  file { "/opt/veracrypt/veracrypt-1.19-setup.tar.bz2":
       owner           => root,
       mode            => 644,
       ensure          => present,
