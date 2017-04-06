@@ -89,7 +89,7 @@ class software::ubuntu {
       source          => "https://atlassian.artifactoryonline.com/atlassian/hipchat-apt-client/pool/HipChat4-4.29.4.1662-Linux.deb"
   }
 
-  package { 'hipchat':
+  package { 'hipchat4':
       ensure          => latest,
       provider        => hiera(provider),
       source          => "/opt/hipchat/HipChat4-4.29.4.1662-Linux.deb"
