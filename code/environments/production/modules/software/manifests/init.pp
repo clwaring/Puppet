@@ -111,7 +111,7 @@ class software::ubuntu {
   }
 
   exec { 'apt-get --assume-yes --allow-unauthenticated install veracrypt':
-      command          => 'apt-get --assume-yes --allow-unauthenticated install veracrypt',
+      command          => 'apt-get --allow-unauthenticated --assume-yes install veracrypt',
       path             => '/usr/bin',
   }
 
