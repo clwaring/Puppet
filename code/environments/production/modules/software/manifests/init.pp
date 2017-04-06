@@ -89,6 +89,11 @@ class software::ubuntu {
       source          => "https://atlassian.artifactoryonline.com/atlassian/hipchat-apt-client/pool/HipChat4-4.29.4.1662-Linux.deb"
   }
 
+  exec { 'dpkg -i /opt/hipchat/HipChat4-4.29.4.1662-Linux.deb':
+      command          => 'dpkg -i /opt/hipchat/HipChat4-4.29.4.1662-Linux.deb',
+      path             => '/usr/bin',
+  }
+
   package { 'hipchat4':
       ensure          => latest,
       provider        => hiera(provider),
@@ -119,7 +124,6 @@ class software::ubuntu {
   package { 'veracrypt':
       ensure          => latest,
       provider        => hiera(provider),
-      #require         => [ Exec['add-apt-repository ppa:unit193/encryption'], Exec['apt update'], Exec['apt install veracrypt']],
   }
 
   package { 'vim':
