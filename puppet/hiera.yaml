@@ -4,8 +4,8 @@
   - yaml
 :hierarchy:
   - "nodes/%{::trusted.certname}"
-  - "groups/%{::groupname}"
   - "os/%{::osname}"
+  - "groups/%{::groupname}"
   - common
 
 :yaml:

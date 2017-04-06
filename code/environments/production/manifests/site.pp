@@ -11,13 +11,13 @@ node default {
 
 #development nodes - ubuntu
 node /(dev-)+(ubu-)+(\w+.)+(idx.local|idxlocal)/ {
-  #notify {hiera(motd::message):}
+  notify {hiera(motd::message):}
   hiera_include('classes')
 }
 
 #development nodes - windows
 node /(dev-)+(win-)+(\w+.)+(idx.local|idxlocal)/ {
-  #notify {hiera(motd::message):}
+  notify {hiera(motd::message):}
   hiera_include('classes')
 }
 
@@ -43,6 +43,11 @@ node 'desktop-1vb20lf.idxlocal' {
 #macos nodes
 node 'idxs-mac-mini.local' {
   notify {hiera(motd::message):}
+}
+
+node /(dev-)+(mac-)+(\w+.)+(idx.local|idxlocal)/ {
+  notify {hiera(motd::message):}
+  hiera_include('classes')
 }
 
 

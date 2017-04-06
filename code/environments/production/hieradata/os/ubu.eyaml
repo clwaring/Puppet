@@ -1,5 +1,7 @@
 ---
 classes:
-  - software
-  
+  - software::ubuntu
+
 provider: 'apt'
+
+motd::message: 'This is the Ubuntu message of the day.'
