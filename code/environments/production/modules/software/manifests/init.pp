@@ -111,14 +111,14 @@ class software::ubuntu {
   }
 
   exec { 'apt-get --assume-yes --allow-unauthenticated install veracrypt':
-      command          => 'apt install veracrypt -y',
+      command          => 'apt --allow-unauthenticated --assume-yes install veracrypt',
       path             => '/usr/bin',
   }
 
-  package { 'veracrypt':
-      ensure          => latest,
-      provider        => hiera(provider),
-  }
+  #package { 'veracrypt':
+  #    ensure          => latest,
+  #    provider        => hiera(provider),
+  #}
 
   package { 'vim':
       ensure          => latest,
