@@ -110,8 +110,8 @@ class software::ubuntu {
       path             => '/usr/bin',
   }
 
-  exec { 'apt-get install veracrypt':
-      command          => 'apt install veracrypt',
+  exec { 'apt-get --assume-yes install veracrypt':
+      command          => 'apt-get --assume-yes install veracrypt',
       path             => '/usr/bin',
   }
 
