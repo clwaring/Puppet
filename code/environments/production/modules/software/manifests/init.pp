@@ -101,6 +101,17 @@ class software::ubuntu {
       provider        => hiera(provider),
   }
 
+  exec { 'add-apt-repository ppa:unit193/encryption':
+      command          => 'add-apt-repository ppa:unit193/encryption',
+  }
+
+  exec { 'apt update':
+      command          => 'apt update',
+  }
+
+  exec { 'apt install veracrypt':
+      command          => 'apt install veracrypt',
+  }
 
   package { 'veracrypt':
       ensure          => latest,
