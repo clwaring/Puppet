@@ -105,9 +105,7 @@ class software::ubuntu {
   package { 'veracrypt':
       ensure          => latest,
       provider        => hiera(provider),
-      require         => Exec['add-apt-repository ppa:unit193/encryption'],
-      require         => Exec['apt update'],
-      require         => Exec['apt install veracrypt'],
+      require         => Exec['add-apt-repository ppa:unit193/encryption', 'apt update', 'apt install veracrypt'],
   }
 
   package { 'vim':
